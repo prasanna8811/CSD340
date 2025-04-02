@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: rgba(0, 102, 204, 0.8);
+    text-align: center;
+}
+
+h3 {
+    color: rgba(255, 165, 0, 0.8);
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+    color: rgba(128, 128, 128, 0.8);
+}
+
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 10%;
+    justify-content: center;
+}
+
+.book {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+figure {
+    text-align: center;
+}
+
+img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
