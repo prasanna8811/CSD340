@@ -1,0 +1,52 @@
+/* Card styles shared by both movie and food sections */
+.card {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .card-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card-content {
+    font-size: 1.2em;
+  }
+  
+  /* Movies table styling */
+  #movies {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  #movies th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+  }
+  
+  #movies td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  /* Layout and footer */
+  .container {
+    margin: 2% 5% 100px 5%;
+  }
+  
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 10px;
+    font-size: 0.9em;
+  }
+  
