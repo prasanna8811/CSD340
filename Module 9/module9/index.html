@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Prasanna Pradhan
+    Assignment 9.3
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <script>
+        var word1 = "journey";
+        var word2 = "stars";
+        var word3 = "bravery";
+        var word4 = "legacy";
+    </script>
+</head>
+<body>
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+    
+    <p>In a galaxy not too far, there lived a traveler on a great <span id="word1">__________</span>.</p>
+    <p>He dreamed of reaching the <span id="word2">__________</span>, fueled by curiosity and courage.</p>
+    <p>With <span id="word3">__________</span> in his heart, he carved a <span id="word4">__________</span> for generations to follow.</p>
+    
+    <p>
+        <button onclick="document.getElementById('word1').innerHTML = word1;">Reveal 1</button>
+        <button onclick="document.getElementById('word2').innerHTML = word2;">Reveal 2</button>
+        <button onclick="document.getElementById('word3').innerHTML = word3;">Reveal 3</button>
+        <button onclick="document.getElementById('word4').innerHTML = word4;">Reveal 4</button>
+    </p>
+</body>
+</html>
