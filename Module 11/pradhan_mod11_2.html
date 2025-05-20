@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8;
+      padding: 30px;
+      color: #333;
+    }
+
+    h1 {
+      color: #1a73e8;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #1a73e8;
+      color: white;
+    }
+
+    button:hover {
+      background-color: #155ab6;
+    }
+
+    #output {
+      margin-top: 20px;
+    }
+
+    ol {
+      padding-left: 20px;
+    }
+
+    .instructions {
+      font-size: 0.95em;
+      margin-bottom: 20px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+    <div class="instructions">
+      Enter a task in the box below. Use the buttons to add a task, delete the last task, or display the full to-do list.
+    </div>
+
+    <input type="text" id="taskInput" placeholder="e.g., Finish reading chapter 5">
+    
+    <div>
+      <button onclick="addTask()">Add</button>
+      <button onclick="deleteLastTask()">Delete Last Task</button>
+      <button onclick="displayTasks()">Display Tasks</button>
+    </div>
+
+    <div id="output"></div>
+  </div>
+
+  <script>
+    const tasks = [];
+
+    function addTask() {
+      const input = document.getElementById("taskInput").value.trim();
+      if (input) {
+        tasks.push(input);
+        alert(`Added: "${input}" at position ${tasks.length}`);
+        document.getElementById("taskInput").value = "";
+      } else {
+        alert("Please enter a task.");
+      }
+    }
+
+    function deleteLastTask() {
+      if (tasks.length > 0) {
+        const removed = tasks.pop();
+        alert(`Removed: "${removed}"`);
+      } else {
+        alert("No tasks to remove.");
+      }
+    }
+
+    function displayTasks() {
+      const outputDiv = document.getElementById("output");
+      outputDiv.innerHTML = "";
+
+      if (tasks.length === 0) {
+        outputDiv.innerHTML = "<p>No tasks in the list.</p>";
+        return;
+      }
+
+      const list = document.createElement("ol");
+      for (let i = 0; i < tasks.length; i++) {
+        const item = document.createElement("li");
+        item.textContent = tasks[i];
+        list.appendChild(item);
+      }
+
+      outputDiv.appendChild(list);
+    }
+  </script>
+
+</body>
+</html>
